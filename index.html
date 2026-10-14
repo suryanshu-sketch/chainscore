@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChainScore — Your Personal Cyber Risk Score</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================ LANDING ============================================================ -->
+<div id="view-landing">
+  <header class="site">
+    <div class="wrap bar">
+      <div class="logo" id="logoLanding">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="3" y="10" width="14" height="12" rx="6" transform="rotate(-20 10 16)" stroke="#8B7CFA" stroke-width="3"/><rect x="15" y="10" width="14" height="12" rx="6" transform="rotate(-20 22 16)" stroke="#25E1D2" stroke-width="3"/></svg>
+        ChainScore
+      </div>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="actions">
+        <button class="btn btn-ghost btn-sm" onclick="goAuth('login')">Log in</button>
+        <button class="btn btn-primary btn-sm" onclick="goAuth('signup')">Get Started</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="wrap hero-inner">
+      <div class="pill"><span class="dot"></span> Free &amp; open scoring — no vendor lock-in</div>
+      <h1>See your risk.<br>Fix what <span class="grad">actually matters.</span></h1>
+      <p class="sub">ChainScore turns your device settings, browsing habits, and password hygiene into one transparent Cyber Risk Score — built on cited research, not a hidden formula.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" onclick="goAuth('signup')">Start Free Assessment</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">See how it works</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Three pillars, one score</div>
+        <h2>Everything else checks one thing.</h2>
+        <p>Password checkers check passwords. Antivirus scores check your device. ChainScore combines all three — like a credit score, but for personal cybersecurity.</p>
+      </div>
+      <div class="grid3">
+        <div class="card feat-card">
+          <div class="icon-badge" style="background:var(--accent-soft); color:var(--accent);">💻</div>
+          <h3>Device settings</h3>
+          <p>Firewall, disk encryption, updates, backups — the fundamentals most people never check twice.</p>
+        </div>
+        <div class="card feat-card">
+          <div class="icon-badge" style="background:var(--accent2-soft); color:var(--accent2);">🌐</div>
+          <h3>Browsing habits</h3>
+          <p>URL checks, link hygiene, tracker exposure — the behavioral half of the risk equation.</p>
+        </div>
+        <div class="card feat-card">
+          <div class="icon-badge" style="background:var(--warning-soft); color:var(--warning);">🔑</div>
+          <h3>Password hygiene</h3>
+          <p>Strength, reuse, and breach exposure — checked locally, never stored in plaintext.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" style="position:relative; overflow:hidden;">
+    <div style="position:absolute; top:20%; right:-180px; width:520px; height:520px; border-radius:50%;
+      background:radial-gradient(circle, rgba(139,124,250,0.16), rgba(2,2,3,0) 70%); filter:blur(4px); pointer-events:none;"></div>
+    <div style="position:absolute; bottom:-10%; left:-160px; width:480px; height:480px; border-radius:50%;
+      background:radial-gradient(circle, rgba(37,225,210,0.14), rgba(2,2,3,0) 70%); filter:blur(4px); pointer-events:none;"></div>
+    <div class="wrap" style="position:relative; z-index:1;">
+      <div class="section-head">
+        <div class="eyebrow">What's actually different</div>
+        <h2>Two things no other tool does.</h2>
+        <p>McAfee and Avast already combine signals into a score — but they're proprietary, paid, and don't publish their weights. ChainScore is free, transparent, and goes further.</p>
+      </div>
+
+      <div class="spotlight">
+        <div class="txt">
+          <div class="badge-new">BLAST-RADIUS AWARE</div>
+          <h3>Not every reused password is equally dangerous</h3>
+          <p>Reusing a password between two throwaway accounts is minor. Reusing it between a throwaway account and your recovery email is not — that breach can cascade into everything the email can reset. ChainScore weighs reuse by what's actually at stake.</p>
+        </div>
+        <div class="visual card">
+          <div class="chain-demo">
+            <div class="cnode low">Random<br>Forum</div>
+            <div class="arrow">→</div>
+            <div class="cnode critical">Recovery<br>Email</div>
+            <div class="arrow">→</div>
+            <div class="cnode low">Everything<br>Else</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spotlight">
+        <div class="txt">
+          <div class="badge-new">LIVE WHAT-IF SIMULATOR</div>
+          <h3>See a fix's impact before you commit to it</h3>
+          <p>Toggle any setting on your dashboard and watch your score recompute instantly — the same scoring formula, run in preview mode. Nothing is saved until you confirm.</p>
+        </div>
+        <div class="visual card">
+          <div style="display:flex; align-items:center; justify-content:center; gap:18px;">
+            <div style="text-align:center;"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">BEFORE</div><div style="font-family:var(--font-head);font-size:30px;color:var(--warning);">58</div></div>
+            <div style="color:var(--accent); font-size:20px;">→</div>
+            <div style="text-align:center;"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">AFTER</div><div style="font-family:var(--font-head);font-size:30px;color:var(--success);">66</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Good to know</div>
+        <h2>Frequently asked</h2>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="font-size:15px;margin-bottom:8px;">Do you store my passwords?</h3>
+          <p style="font-size:13.5px;color:var(--text-secondary);">No. Passwords are analyzed for strength and reuse in your session only — never stored in plaintext, never sent anywhere in full.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:15px;margin-bottom:8px;">How is breach exposure checked?</h3>
+          <p style="font-size:13.5px;color:var(--text-secondary);">Via the k-anonymity method — only a short hash prefix is ever transmitted, never your actual password.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:15px;margin-bottom:8px;">Is the scoring formula public?</h3>
+          <p style="font-size:13.5px;color:var(--text-secondary);">Yes — every weight is rule-based and documented, unlike proprietary vendor scores.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:15px;margin-bottom:8px;">Is this free?</h3>
+          <p style="font-size:13.5px;color:var(--text-secondary);">Yes. ChainScore is a free, open scoring project — no subscription required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <div class="logo" style="margin-bottom:12px;">
+            <svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="3" y="10" width="14" height="12" rx="6" transform="rotate(-20 10 16)" stroke="#8B7CFA" stroke-width="3"/><rect x="15" y="10" width="14" height="12" rx="6" transform="rotate(-20 22 16)" stroke="#25E1D2" stroke-width="3"/></svg>
+            ChainScore
+          </div>
+          <p style="font-size:13.5px; color:var(--text-secondary); max-width:280px;">One score. Three pillars. No black box.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#faq">FAQ</a></li></ul>
+        </div>
+        <div>
+          <h4>Trust</h4>
+          <ul><li><a onclick="return false;">Privacy by design</a></li><li><a onclick="return false;">Local-first analysis</a></li></ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 ChainScore. A student project prototype.</span>
+        <span>Passwords are analyzed locally and never stored in plaintext.</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================ AUTH ============================================================ -->
+<div id="view-auth" class="hidden">
+  <div class="auth-screen">
+    <div class="hero-glow" style="top:-380px;"></div>
+    <div style="position:relative; width:100%; max-width:404px;">
+      <a class="back-link" onclick="goLanding()">← Back to home</a>
+      <div class="auth-card">
+        <div class="logo" style="justify-content:center; margin-bottom:22px;">
+          <svg class="logo-mark" viewBox="0 0 32 32" fill="none"><rect x="3" y="10" width="14" height="12" rx="6" transform="rotate(-20 10 16)" stroke="#8B7CFA" stroke-width="3"/><rect x="15" y="10" width="14" height="12" rx="6" transform="rotate(-20 22 16)" stroke="#25E1D2" stroke-width="3"/></svg>
+          ChainScore
+        </div>
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="tabLogin" onclick="setAuthTab('login')">Log In</button>
+          <button class="auth-tab" id="tabSignup" onclick="setAuthTab('signup')">Sign Up</button>
+        </div>
+        <div id="signupNameField" class="field hidden">
+          <label>Name</label>
+          <input type="text" id="authName" placeholder="Ada Lovelace">
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="authEmail" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="authPassword" placeholder="••••••••">
+        </div>
+        <button class="btn btn-primary btn-block" id="authSubmitBtn" onclick="submitAuth()">Log In</button>
+        <div class="demo-note">🔒 Demo sign-in — this prototype skips real backend auth. Enter anything and continue to your dashboard.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ APP ============================================================ -->
+<div id="view-app" class="hidden">
+  <div class="app-shell">
+    <div class="topbar">
+      <div class="logo" style="font-size:16.5px;">
+        <svg class="logo-mark" style="width:24px;height:24px;" viewBox="0 0 32 32" fill="none"><rect x="3" y="10" width="14" height="12" rx="6" transform="rotate(-20 10 16)" stroke="#8B7CFA" stroke-width="3"/><rect x="15" y="10" width="14" height="12" rx="6" transform="rotate(-20 22 16)" stroke="#25E1D2" stroke-width="3"/></svg>
+        ChainScore
+      </div>
+      <div class="tabs">
+        <button class="tab active" id="tabDashboard" onclick="switchAppTab('dashboard')">Dashboard</button>
+        <button class="tab" id="tabIntake" onclick="switchAppTab('intake')">New Assessment</button>
+      </div>
+      <div class="user-menu">
+        <div class="avatar" id="userAvatar" onclick="toggleUserMenu()">U</div>
+        <div class="user-dropdown hidden" id="userDropdown">
+          <button onclick="doLogout()">Log out</button>
+        </div>
+      </div>
+    </div>
+
+    <main class="app-main">
+      <div class="wrap">
+
+        <!-- INTAKE -->
+        <div id="panel-intake">
+          <div class="intake-head">
+            <h2>Let's check your risk</h2>
+            <p>Answer honestly — nothing is judged, and your passwords never leave your session as plaintext.</p>
+          </div>
+
+          <div class="form-section">
+            <div class="fs-head"><div class="fs-icon" style="background:var(--accent-soft); color:var(--accent);">💻</div><h3>Device settings</h3></div>
+            <div id="deviceChecklist"></div>
+          </div>
+
+          <div class="form-section">
+            <div class="fs-head"><div class="fs-icon" style="background:var(--accent2-soft); color:var(--accent2);">🌐</div><h3>Browsing habits</h3></div>
+            <div id="browsingChecklist"></div>
+          </div>
+
+          <div class="form-section">
+            <div class="fs-head"><div class="fs-icon" style="background:var(--warning-soft); color:var(--warning);">🔑</div><h3>Passwords (2–5)</h3></div>
+            <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:12px;">Tag each one by what it protects — this powers the blast-radius check. Nothing is stored in plaintext.</p>
+            <div id="pwList"></div>
+            <button class="add-pw" id="addPwBtn" onclick="addPasswordRow()">+ Add another password</button>
+          </div>
+
+          <button class="btn btn-primary" id="runAssessmentBtn" style="margin-top:10px; padding:13px 26px;" onclick="runAssessment()">Calculate My ChainScore →</button>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="panel-results" class="hidden">
+          <div class="intake-head" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px;">
+            <div>
+              <h2>Your ChainScore</h2>
+              <p id="resultTimestamp" style="color:var(--text-secondary); font-size:13.5px;"></p>
+            </div>
+            <div class="actions-row">
+              <button class="btn btn-soft btn-sm" onclick="downloadPdf()">⬇ Download PDF Report</button>
+              <button class="btn btn-soft btn-sm" onclick="openShareModal()">▦ Generate QR Report</button>
+              <span id="actionStatus" style="font-size:12.5px; color:var(--success); align-self:center;"></span>
+            </div>
+          </div>
+
+          <div class="results-top">
+            <div class="card gauge-card">
+              <svg id="gaugeSvg" viewBox="0 0 240 150" width="260"></svg>
+              <div style="font-family:var(--font-head); font-size:44px; margin-top:-6px;" id="gaugeNumber">--</div>
+              <div style="font-size:12.5px; color:var(--text-muted);">out of 100</div>
+              <div class="tier-badge" id="tierBadge">--</div>
+            </div>
+            <div class="subscores" id="subscoreList"></div>
+          </div>
+
+          <div class="card narrative-card">
+            <div class="nic">⚠</div>
+            <div>
+              <span class="badge-src badge-rule" id="narrativeBadge">RULE-BASED</span>
+              <p id="narrativeText">Analyzing your most realistic risk path…</p>
+            </div>
+          </div>
+
+          <div class="chain-groups" id="chainGroupsWrap"></div>
+
+          <div class="section-title"><h3>Top things to fix</h3></div>
+          <div id="riskList" style="margin-bottom:20px;"></div>
+
+          <div class="card simulator-card">
+            <div class="section-title" style="margin-bottom:4px;"><h3>🎛 Live what-if simulator</h3></div>
+            <p style="font-size:13px; color:var(--text-secondary); margin-bottom:6px;">Toggle any setting to preview your score — nothing is saved until you run a new assessment.</p>
+            <div class="sim-grid" id="simGrid"></div>
+            <div class="sim-result">
+              <div>
+                <div style="font-size:11.5px; color:var(--text-muted);">PREVIEW SCORE</div>
+                <div class="num" id="simScoreNum">--</div>
+              </div>
+              <div class="delta" id="simDelta"></div>
+              <button class="btn btn-ghost btn-sm" style="margin-left:auto;" onclick="resetSimulator()">Reset</button>
+            </div>
+          </div>
+
+          <div class="card trend-card">
+            <div class="section-title"><h3>📈 Score history</h3></div>
+            <canvas id="trendChart" height="90"></canvas>
+            <p id="trendEmptyNote" style="font-size:12.5px; color:var(--text-muted); margin-top:10px;"></p>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Share modal -->
+<div id="shareModalOverlay" class="modal-overlay hidden">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeShareModal()">✕</button>
+    <h3 style="font-size:18px; margin-bottom:6px;">Share your report</h3>
+    <p style="font-size:13px; color:var(--text-secondary);">Only your scores are shared — never your passwords or account names.</p>
+    <div class="qr-box"><div id="qrcodeEl"></div></div>
+    <div style="font-size:11.5px; color:var(--text-muted); word-break:break-all;" id="shareUrlText"></div>
+    <div class="report-preview">
+      <div class="rp-head">WHAT SCANNING THIS SHOWS</div>
+      <div class="rp-score" id="rpScore">--</div>
+      <div style="font-size:12px; color:var(--text-muted); margin-bottom:8px;" id="rpTier">--</div>
+      <div class="rp-sub"><span>Password Hygiene</span><b id="rpPw">--</b></div>
+      <div class="rp-sub"><span>Device Security</span><b id="rpDev">--</b></div>
+      <div class="rp-sub"><span>Browsing Habits</span><b id="rpBrw">--</b></div>
+      <div class="rp-sub" style="border-top:none; padding-top:10px;"><span>Top Risk</span><b id="rpTopRisk" style="text-align:right; max-width:60%;">--</b></div>
+    </div>
+    <div style="font-size:11px; color:var(--text-muted); margin-top:14px;">Link expires in 7 days · aggregate data only, opt-in per report</div>
+  </div>
+</div>
+
+<script src="js/vendor/chart.umd.min.js"></script>
+<script src="js/vendor/jspdf.umd.min.js"></script>
+<script src="js/vendor/qrcode.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

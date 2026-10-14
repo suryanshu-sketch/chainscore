@@ -1,0 +1,18 @@
+{
+  "name": "chainscore",
+  "version": "1.0.0",
+  "description": "ChainScore — Personal Cyber Risk Score Calculator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "cybersecurity",
+    "risk-score",
+    "credential-hygiene",
+    "blast-radius"
+  ],
+  "author": "",
+  "license": "ISC"
+}
