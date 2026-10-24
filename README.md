@@ -3,7 +3,7 @@
 One score for device settings, browsing habits, and password hygiene — built on cited
 research, not a hidden vendor formula. A BCSE410L Cyber Security course project.
 
-Live demo (hosted on Claude Artifacts): https://claude.ai/artifact/KhpyNasjDKn5X4qELAyUCJ
+Live demo (hosted on Claude Render): https://chainscore-vb9b.onrender.com/
 
 ## What this is
 
